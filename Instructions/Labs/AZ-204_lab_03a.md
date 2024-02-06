@@ -165,25 +165,10 @@ In this exercise, you created placeholder containers in the Storage account, and
 
 1. On the **Start** screen, select the **Visual Studio Code** tile.
 
-1. On the **File** menu, select **Open Folder**, browse to **Allfiles (F):\\Allfiles\\Labs\\03\\Starter\\BlobManager**, and then select **Select Folder**.
+1. On the **File** menu, select **Open Folder**, browse to **Allfiles (F):\\Allfiles\\Labs\\03\\Solution\\BlobManager**, and then select **Select Folder**.
 
 1. In the **Visual Studio Code** window, on the Menu Bar, select **Terminal** and then select **New Terminal**.
 
-1. In the terminal, run the following command to create a new .NET project named **BlobManager** in the current folder:
-
-    ```
-    dotnet new console --framework net8.0 --name BlobManager --output .
-    ```
-
-    > **Note**: The **dotnet new** command will create a new **console** project in a folder with the same name as the project.
-
-1. In the terminal, run the following command to import version 12.18.0 of **Azure.Storage.Blobs** from NuGet:
-
-    ```
-    dotnet add package Azure.Storage.Blobs --version 12.18.0
-    ```
-
-    > **Note**: The **dotnet add package** command will add the **Azure.Storage.Blobs** package from NuGet. For more information, refer to [Azure.Storage.Blobs](https://www.nuget.org/packages/Azure.Storage.Blobs/12.18.0).
 
 1. In the terminal, run the following command to build the .NET web application:
 
@@ -197,35 +182,6 @@ In this exercise, you created placeholder containers in the Storage account, and
 
 1. On the **Explorer** pane of the **Visual Studio Code** window, open the **Program.cs** file.
 
-1. On the code editor tab for the **Program.cs** file, delete all the code in the existing file.
-
-1. Add the following code:
-
-    ```csharp
-    using Azure.Storage;
-    using Azure.Storage.Blobs;
-    using Azure.Storage.Blobs.Models;
-    using System;
-    using System.Threading.Tasks;    
-    public class Program
-    {
-        //Update the blobServiceEndpoint value that you recorded previously in this lab.        
-        private const string blobServiceEndpoint = "<primary-blob-service-endpoint>";
-
-        //Update the storageAccountName value that you recorded previously in this lab.
-        private const string storageAccountName = "<storage-account-name>";
-
-        //Update the storageAccountKey value that you recorded previously in this lab.
-        private const string storageAccountKey = "<key>";    
-
-
-        //The following code to create a new asynchronous Main method
-        public static async Task Main(string[] args)
-        { 
-        }
-    }
-    ```
-
 1. Update the **blobServiceEndpoint** string constant by setting its value to the **Primary Blob Service Endpoint** of the storage account that you recorded previously in this lab.
 
 1. Update the **storageAccountName** string constant by setting its value to the **Storage account name** of the storage account that you recorded previously in this lab.
@@ -235,35 +191,6 @@ In this exercise, you created placeholder containers in the Storage account, and
 
 #### Task 3: Connect to the Azure Storage blob service endpoint
 
-1. In the **Main** method, add the following code:
-  
-    ```csharp
-     public static async Task Main(string[] args)
-    {
-        //The following line of code to create a new instance of the StorageSharedKeyCredential class by using the storageAccountName and storageAccountKey constants as constructor parameters
-        StorageSharedKeyCredential accountCredentials = new StorageSharedKeyCredential(storageAccountName, storageAccountKey);
-
-        //The following line of code to create a new instance of the BlobServiceClient class by using the blobServiceEndpoint constant and the accountCredentials variable as constructor parameters
-        BlobServiceClient serviceClient = new BlobServiceClient(new Uri(blobServiceEndpoint), accountCredentials);
-
-        //The following line of code to invoke the GetAccountInfoAsync method of the BlobServiceClient class to retrieve account metadata from the service
-        AccountInfo info = await serviceClient.GetAccountInfoAsync();
-
-        //Render a welcome message
-        await Console.Out.WriteLineAsync($"Connected to Azure Storage Account");
-
-        //Render the storage account's name
-        await Console.Out.WriteLineAsync($"Account name:\t{storageAccountName}");
-
-        //Render the type of storage account
-        await Console.Out.WriteLineAsync($"Account kind:\t{info?.AccountKind}");
-
-        //Render the currently selected stock keeping unit (SKU) for the storage account
-        await Console.Out.WriteLineAsync($"Account sku:\t{info?.SkuName}");
-    }
-    ```
-
-1. Save the **Program.cs** file.
 
 1. In the **Visual Studio Code** window, on the Menu Bar, select **Terminal** and then select **New Terminal**.
 
@@ -272,9 +199,6 @@ In this exercise, you created placeholder containers in the Storage account, and
     ```
     dotnet run
     ```
-
-    > **Note**: If there are any build errors, review the **Program.cs** file in the **Allfiles (F):\\Allfiles\\Labs\\03\\Solution\\BlobManager** folder.
-
 1. Observe the output from the currently running console application. The output contains metadata for the storage account that was retrieved from the service.
 
 1. Select **Kill Terminal** or the **Recycle Bin** icon to close the currently open terminal and any associated processes.
