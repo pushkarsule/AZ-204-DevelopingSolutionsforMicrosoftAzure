@@ -47,6 +47,7 @@ public class Program
 
     }
 
+//Enumerate containers in the storage account
     private static async Task EnumerateContainersAsync(BlobServiceClient client)
 {   
     /*Create an asynchronous foreach loop that iterates over the results of 
@@ -56,6 +57,7 @@ public class Program
     }
 }
 
+//Enumerate blobs in specified container
 private static async Task EnumerateBlobsAsync(BlobServiceClient client, string containerName)
 {   
     /* Get a new instance of the BlobContainerClient class by using the
@@ -71,6 +73,7 @@ private static async Task EnumerateBlobsAsync(BlobServiceClient client, string c
      }
 }
 
+//Return  the container
 private static async Task<BlobContainerClient> GetContainerAsync(BlobServiceClient client, string containerName)
 {   
     /* Get a new instance of the BlobContainerClient class by using the
@@ -85,6 +88,7 @@ private static async Task<BlobContainerClient> GetContainerAsync(BlobServiceClie
    
 }
 
+//Return the specified Blob
 private static async Task<BlobClient> GetBlobAsync(BlobContainerClient client, string blobName)
 {   
     //Create a new instance of the BlobClient class using the GetBlobClient method of the BlobContainerClient class.
