@@ -155,6 +155,29 @@ In this exercise, you created a new Storage account to use throughout the remain
    
    > **Note**: Wait for the blob to upload before you continue with this lab.
 
+#### Task 3: Upload a new blob by using the portal
+
+1. On the Azure portal's **navigation** pane, select the **Resource groups** link.
+
+1. On the **Resource groups** blade, select the **StorageMedia** resource group that you created previously in this lab.
+
+1. On the **StorageMedia** blade, select the **mediastor**_[yourname]_ storage account that you created previously in this lab.
+
+1. On the **Storage account** blade, select the **Containers** link in the **Data storage** section.
+
+1. In the **Containers** section, select the newly created **vector-graphics** container. You might need to refresh the page to observe the new container.
+
+1.	On the **Container** blade, select **Upload**.
+
+1.	In the **Upload blob** window, perform the following actions, and then select **Upload**:
+
+    | Setting | Action |
+    | -- | -- |
+    | **Files** section | Select **Browse for files** or use the drag and drop feature |
+    | **File Explorer** window |  **Allfiles (F):\\Allfiles\\Labs\\03\\Starter\\Images**, select the **graph.svg** file, and then select **Open** |
+    | **Overwrite if files already exist** check box | Ensure that the check box is selected |
+
+    > **Note**: Wait for the blob to upload before you continue with this lab.
 #### Review
 
 In this exercise, you created placeholder containers in the Storage account, and then populated one of the containers with a blob.
@@ -205,45 +228,17 @@ In this exercise, you created placeholder containers in the Storage account, and
 
 3. Review the output from the currently running console application. The updated output includes metadata about the existing container and blobs.
 
-1. Observe the output from the currently running console application. The updated output includes metadata about the existing container and blobs.
-
+4. Observe the output from the currently running console application. The updated output includes metadata about the existing container and blobs.
+  
+5. Observe the output from the currently running console application. The updated output includes the final URL to access the blob online. Record the value of this URL to use later in the lab.
+    > **Note**: The URL will likely be similar to the following string: `https://mediastor*[yourname]*.blob.core.windows.net/vector-graphics/graph.svg`
 1. Select **Kill Terminal** or the **Recycle Bin** icon to close the currently open terminal and any associated processes.
-
-#### Task 3: Upload a new blob by using the portal
-
-1. On the Azure portal's **navigation** pane, select the **Resource groups** link.
-
-1. On the **Resource groups** blade, select the **StorageMedia** resource group that you created previously in this lab.
-
-1. On the **StorageMedia** blade, select the **mediastor**_[yourname]_ storage account that you created previously in this lab.
-
-1. On the **Storage account** blade, select the **Containers** link in the **Data storage** section.
-
-1. In the **Containers** section, select the newly created **vector-graphics** container. You might need to refresh the page to observe the new container.
-
-1.	On the **Container** blade, select **Upload**.
-
-1.	In the **Upload blob** window, perform the following actions, and then select **Upload**:
-
-    | Setting | Action |
-    | -- | -- |
-    | **Files** section | Select **Browse for files** or use the drag and drop feature |
-    | **File Explorer** window |  **Allfiles (F):\\Allfiles\\Labs\\03\\Starter\\Images**, select the **graph.svg** file, and then select **Open** |
-    | **Overwrite if files already exist** check box | Ensure that the check box is selected |
-
-    > **Note**: Wait for the blob to upload before you continue with this lab.
 
 #### Task 4: Access blob URI by using the SDK
 
 1. Switch to the **Visual Studio Code** window.
 
-    > **Note**: If there are any build errors, review the **Program.cs** file in the **Allfiles (F):\\Allfiles\\Labs\\03\\Solution\\BlobManager** folder.
-
-1. Observe the output from the currently running console application. The updated output includes the final URL to access the blob online. Record the value of this URL to use later in the lab.
-
-    > **Note**: The URL will likely be similar to the following string: `https://mediastor*[yourname]*.blob.core.windows.net/vector-graphics/graph.svg`
-
-1. Select **Kill Terminal** or the **Recycle Bin** icon to close the currently open terminal and any associated processes.
+2. Select **Kill Terminal** or the **Recycle Bin** icon to close the currently open terminal and any associated processes.
 
 #### Task 5: Test the URI by using a browser
 
