@@ -224,13 +224,13 @@ In this exercise, you created placeholder containers in the Storage account, and
     ```
 1. Observe the output from the currently running console application. The output contains metadata for the storage account that was retrieved from the service.
 
-2. Observe the output from the currently running console application. The updated output includes a list of every existing container in the account.
+2. Observe the output from the currently running console application. The output includes a list of every existing container in the account.
 
-3. Review the output from the currently running console application. The updated output includes metadata about the existing container and blobs.
+3. Review the output from the currently running console application. The output includes metadata about the existing container and blobs.
 
-4. Observe the output from the currently running console application. The updated output includes metadata about the existing container and blobs.
+4. Observe the output from the currently running console application. The output includes metadata about the existing container and blobs.
   
-5. Observe the output from the currently running console application. The updated output includes the final URL to access the blob online. Record the value of this URL to use later in the lab.
+5. Observe the output from the currently running console application. The output includes the final URL to access the blob online. Record the value of this URL to use later in the lab.
     > **Note**: The URL will likely be similar to the following string: `https://mediastor*[yourname]*.blob.core.windows.net/vector-graphics/graph.svg`
 1. Select **Kill Terminal** or the **Recycle Bin** icon to close the currently open terminal and any associated processes.
 
