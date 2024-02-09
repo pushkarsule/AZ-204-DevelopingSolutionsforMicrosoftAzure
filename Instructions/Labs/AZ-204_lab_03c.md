@@ -196,10 +196,10 @@ In this exercise, you created placeholder containers in the Storage account, and
 #### Task 2: Modify the Program class to access Storage
 
 1. On the **Explorer** pane of the **Visual Studio Code** window, open the **Program.cs** and **Program.txt** file.
-
 1. Copy the entire contents of Program.txt and replace Program the content of Program.cs.
 2. Replace the <primary-blob-service-endpoint> placeholder with the value to the **Primary Blob Service Endpoint** of the storage account that you recorded previously in this lab.
 3. Replace the <storageAccountName> placeholder with the value to the **Storage account name** of the storage account that you recorded previously in this lab.
+4. Replace the <storageAccountKey> placeholder with the value to the **Key** of the storage account that you recorded previously in this lab.
 
 #### Task 3: Connect to the Azure Storage blob service endpoint
 
