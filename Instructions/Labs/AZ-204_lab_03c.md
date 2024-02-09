@@ -322,9 +322,9 @@ In this exercise, you accessed existing containers by using the Azure Storage SD
 
 1. Switch to the **Visual Studio Code** window.
 
-1. In the **Program** class, enter the following code to create a new **private static** method named **GetBlobAsync** that retrieves blob URI.
+1. In the **Program** class, enter the code to create a new **private static** method named **GetBlobAsync** that retrieves blob URI.
    
-1. In the **Main** method, enter the following code at the end of the method to create a variable named *uploadedBlobName* with a value of **graph.svg**:
+1. In the **Main** method, enter the following code at the end of the method to create a variable named *uploadedBlobName* with a value of **graph.svg**.
 
  1. In the **Main** method, enter the code at the end of the method to invoke the **GetBlobAsync** method, passing in the *containerClient* and *uploadedBlobName* variables as parameters, and to store the result in a variable named *blobClient* of type **BlobClient**:
 
